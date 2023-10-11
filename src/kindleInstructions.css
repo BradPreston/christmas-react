@@ -1,0 +1,81 @@
+#kindle-instructions {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--trans-black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(20px);
+	z-index: 10;
+	font-size: 1.6rem;
+}
+
+#instructions-wrapper {
+	background: var(--black);
+	border: 1px solid var(--gold);
+	padding: 30px;
+	border-radius: 10px;
+	position: relative;
+	width: 85%;
+	max-height: 85%;
+	height: fit-content;
+	max-width: 600px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 0;
+}
+
+#instructions-wrapper h2 {
+	max-width: 240px;
+}
+
+@media only screen and (min-width: 620px) {
+	#instructions-wrapper h2 {
+		max-width: 100%;
+	}
+}
+
+#close-kindle-instructions {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: var(--black);
+	border: 1px solid var(--gold);
+	border-radius: 60px;
+	color: var(--white);
+	transition: all 0.15s;
+	z-index: 10;
+}
+
+#close-kindle-instructions:hover {
+	cursor: pointer;
+	color: var(--red);
+	border-color: var(--red);
+}
+
+#close-kindle-instructions i {
+	font-size: 1.9rem;
+	/* padding: 10px; */
+	width: 30px;
+	height: 30px;
+	/* height: 30px;
+  width: 30px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#kindle-instructions ol {
+	margin-left: 15px;
+	padding: 20px 0;
+	width: 90%;
+}
+
+#kindle-instructions li {
+	margin-bottom: 10px;
+	padding-left: 10px;
+	width: 100%;
+}

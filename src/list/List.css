@@ -1,0 +1,126 @@
+.list {
+	list-style: none;
+	font-size: 1.6rem;
+	margin: 0 auto;
+	max-width: 310px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.list-item {
+	display: grid;
+	grid-template-columns: 120px auto;
+	grid-template-rows: auto auto auto;
+	gap: 5px 0;
+	grid-template-areas:
+		'image title'
+		'image price'
+		'image link';
+	position: relative;
+	margin-bottom: 30px;
+	padding: 15px;
+	border-radius: 9px;
+	background: rgb(57, 56, 69);
+	max-width: 310px;
+}
+
+.item-image {
+	height: 150px;
+	grid-area: image;
+	background: var(--red);
+	color: var(--white);
+	width: 100px;
+	object-fit: cover;
+	font-size: 1.2rem;
+}
+
+.item-title {
+	grid-area: title;
+}
+
+.item-price {
+	grid-area: price;
+}
+
+.item-link {
+	color: var(--red);
+	grid-area: link;
+	text-decoration: none;
+	width: fit-content;
+	position: relative;
+	padding: 15px 0;
+	height: fit-content;
+	z-index: 0;
+	transition: color 0.15s;
+}
+
+.item-link:hover {
+	color: var(--white);
+}
+
+.hide {
+	visibility: hidden;
+}
+
+i {
+	font-size: 1.2rem;
+}
+
+.item-buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 270px;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.saved,
+.purchased {
+	z-index: 8;
+}
+
+.saved .item-buttons {
+	z-index: 9999 !important;
+}
+
+.purchased::before,
+.saved::before {
+	content: '';
+	background: var(--trans-black);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+
+.saved::after,
+.purchased::after {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: var(--black);
+}
+
+.saved::after {
+	content: 'Someone has this item saved';
+	background: rgba(255, 255, 15, 1);
+}
+
+.purchased::after {
+	content: 'This item has been purchased';
+	background: rgba(255, 155, 147, 1);
+}
+
+@media only screen and (min-width: 750px) {
+	.list {
+		max-width: 650px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: var(--white);
+	background-color: var(--black);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	--black: rgb(43, 42, 52);
+	--trans-black: rgba(43, 42, 52, 0.85);
+	--white: rgb(224, 225, 221);
+	--gold: rgb(203, 167, 47);
+	--red: rgb(255, 155, 147);
+	--red-hover: rgba(255, 155, 147, 0.25);
+
+	--border-radius-sm: 5px;
+	--transition: all 0.15s;
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+.button--default {
+	background: transparent;
+	border: 1px solid var(--red);
+	color: var(--red);
+	width: 100%;
+	font-size: 1.6rem;
+	padding: 5px;
+	border-radius: var(--border-radius-sm);
+	transition: var(--transition);
+	text-transform: capitalize;
+}
+
+.button--default:hover {
+	background: var(--red-hover);
+	color: var(--white);
+}
+
+section {
+	margin-top: 40px;
+}
+
+h1 {
+	color: var(--gold);
+	font-size: 3.2rem;
+	font-weight: 400;
+	padding: 10px 0;
+}
+
+h2 {
+	font-size: 2.4rem;
+	font-weight: 400;
+	margin-bottom: 30px;
+	position: relative;
+	width: fit-content;
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	width: 100px;
+	height: 1px;
+	background: var(--gold);
+	bottom: -2px;
+	left: 0;
+}
+
+.container {
+	max-width: 310px;
+	margin: 0 auto;
+	padding: 80px 0;
+}
+
+@media only screen and (min-width: 750px) {
+	.container {
+		max-width: 650px;
+	}
+}
