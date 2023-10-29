@@ -61,19 +61,19 @@ function App() {
 						onClick={() => setShowInstructions(true)}>
 						How to purchase a Kindle copy as a gift
 					</button>
-					<List showButtons={true} items={books} />
+					<List showButtons={true} items={books} table='books' />
 				</section>
 				<section>
 					<h2>Video Games</h2>
-					<List showButtons={true} items={videoGames} />
+					<List showButtons={true} items={videoGames} table='video_games' />
 				</section>
 				<section>
 					<h2>Misc</h2>
-					<List showButtons={true} items={misc} />
+					<List showButtons={true} items={misc} table='misc' />
 				</section>
 				<section>
 					<h2>Gift Cards</h2>
-					<List showButtons={false} items={giftCards} />
+					<List showButtons={false} items={giftCards} table='gift_cards' />
 				</section>
 			</main>
 			{showInstructions ? (

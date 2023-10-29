@@ -1,0 +1,39 @@
+.purchaseModal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--trans-black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(20px);
+	z-index: 10;
+	font-size: 1.6rem;
+}
+
+.purchaseModal_inner {
+	background: var(--black);
+	border: 1px solid var(--gold);
+	padding: 30px;
+	border-radius: 10px;
+	position: relative;
+	width: 85%;
+	max-height: 85%;
+	height: fit-content;
+	max-width: 600px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 0;
+}
+
+.purchaseModal_inner p {
+	margin-bottom: 20px;
+}
+
+.purchaseModal_link {
+	text-decoration: none;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
